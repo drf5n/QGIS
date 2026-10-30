@@ -52,10 +52,10 @@ QgsMasterPasswordResetDialog::QgsMasterPasswordResetDialog( QWidget *parent )
       chkKeepBackup->hide();
     }
 
-    QString warning = tr( "The authentication store will be re-encrypted using the new password." );
+    QString warning = tr( "The QGIS authentication store will be re-encrypted using the new QGIS password." );
     if ( QgsApplication::authManager()->passwordHelperEnabled() )
     {
-      warning += u"<p><b>%1</b></p>"_s.arg( tr( "The new password will automatically be stored in the system %1." ).arg( QgsAuthManager::passwordHelperDisplayName() ) );
+      warning += u"<p><b>%1</b></p>"_s.arg( tr( "The new QGIS password will automatically be stored in the system %1." ).arg( QgsAuthManager::passwordHelperDisplayName() ) );
     }
 
     lblWarning->setText( warning );
